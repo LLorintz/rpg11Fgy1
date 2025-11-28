@@ -7,6 +7,8 @@ public partial class Player : CharacterBody2D
 
     private AnimatedSprite2D animatedsprite;
 
+    public bool HasKey = false;
+
     public override void _Ready()
     {
         animatedsprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
@@ -70,6 +72,10 @@ public partial class Player : CharacterBody2D
     }
 
 
+    public void PickupKey(){
+        HasKey = true;
+        GD.Print("player objektumban lefutott a pickupkey");
+    }
 
     public override void _PhysicsProcess(double delta)
     {
