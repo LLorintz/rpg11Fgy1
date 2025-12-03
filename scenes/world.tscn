@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnqrmh2ta12on"]
+[gd_scene load_steps=10 format=3 uid="uid://bnqrmh2ta12on"]
 
 [ext_resource type="PackedScene" uid="uid://co2p6vx85g4bl" path="res://scenes/player.tscn" id="1_nnsk1"]
 [ext_resource type="Texture2D" uid="uid://i5lqbl4wp1sv" path="res://art/TilesetFloor.png" id="2_4wyf3"]
 [ext_resource type="Texture2D" uid="uid://cl07lawx1dj14" path="res://art/TilesetNature.png" id="3_k0juu"]
 [ext_resource type="PackedScene" uid="uid://b050l6xg8j1ye" path="res://scenes/key.tscn" id="4_k0juu"]
 [ext_resource type="PackedScene" uid="uid://oybl1jrakhsd" path="res://scenes/door.tscn" id="5_71j4m"]
+[ext_resource type="PackedScene" uid="uid://caf1nqwsxa0vt" path="res://scenes/npc.tscn" id="6_qfnet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_71j4m"]
 texture = ExtResource("2_4wyf3")
@@ -881,3 +882,6 @@ position = Vector2(-23, 42)
 
 [node name="door" parent="." instance=ExtResource("5_71j4m")]
 position = Vector2(33, 42)
+
+[node name="NPC" parent="." instance=ExtResource("6_qfnet")]
+position = Vector2(-67, 18)

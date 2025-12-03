@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://clw8pmvbi7gnn"
+path="res://.godot/imported/elso.dialogue-9c91d529c45de54d7e82929728d26f72.tres"
+
+[deps]
+
+source_file="res://dialogues/elso.dialogue"
+dest_files=["res://.godot/imported/elso.dialogue-9c91d529c45de54d7e82929728d26f72.tres"]
+
+[params]
+
+defaults=true

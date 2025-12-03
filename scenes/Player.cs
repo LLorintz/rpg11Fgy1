@@ -5,6 +5,8 @@ public partial class Player : CharacterBody2D
 {
     [Export]private float MoveSpeed = 200f;
 
+    [Export] private Node2D ActionableFinder;
+
     private AnimatedSprite2D animatedsprite;
 
     public bool HasKey = false;
@@ -77,9 +79,22 @@ public partial class Player : CharacterBody2D
         GD.Print("player objektumban lefutott a pickupkey");
     }
 
+    public override void _UnhandledInput(InputEvent @event){
+        GetInput();
+        if(Input.IsActionJustPressed("ui_accept")){
+            var actionables = ((Area2D)ActionableFinder).GetOverlappingAreas();
+            if(actionables.Count>0)
+            {
+                if(actionables[0] is Actionable action){
+                    action.Action();
+                }
+            }
+        }
+    }
+
     public override void _PhysicsProcess(double delta)
     {
-        GetInput();
+        
         MoveAndSlide();
     }
 
